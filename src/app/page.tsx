@@ -1,5 +1,5 @@
 "use client";
-import Script from 'next/script';
+
 import Image from "next/image";
 import BusinessPaymentsSection from "../components/BusinessPaymentsSection";
 

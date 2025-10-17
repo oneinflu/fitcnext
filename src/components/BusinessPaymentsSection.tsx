@@ -2,7 +2,7 @@
 
 import { useEffect, useRef } from 'react';
 import Image from 'next/image';
-import { AnimatePresence, motion } from 'framer-motion';
+
 
 interface PaymentSection {
   id: number;
@@ -316,7 +316,6 @@ export default function BusinessPaymentsSection() {
   const observerRef = useRef<IntersectionObserver | null>(null);
   const activeIndexRef = useRef<number>(0);
   const sectionRef = useRef<HTMLDivElement>(null);
-  const scrollContainerRef = useRef<HTMLDivElement>(null);
   const animationTimerRef = useRef<NodeJS.Timeout | null>(null);
   const currentStepRef = useRef<number>(0);
 

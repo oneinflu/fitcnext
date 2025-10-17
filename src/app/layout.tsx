@@ -1,9 +1,11 @@
 
 "use client";
-import type { Metadata } from "next";
+
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { useState } from "react";
+import Link from "next/link";
+import Image from "next/image";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -44,22 +46,22 @@ function HeaderWithClientSideToggle() {
     <header className="container mx-auto bg-white py-2 shadow-sm">
       <div className="safe-area flex justify-between items-center">
         {/* Logo */}
-        <a href="/" className="flex items-center">
-          <img 
+        <Link href="/" className="flex items-center">
+          <Image 
             src="/logo.svg" 
             alt="Fit-C Logo" 
             width={80} 
             height={32} 
             className="h-7 w-auto"
           />
-        </a>
+        </Link>
 
         <div className="flex items-center">
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center space-x-6 mr-4">
-            <a href="/gst-search" className="text-gray-600 hover:text-blue-600 text-sm font-medium">
+            <Link href="/gst-search" className="text-gray-600 hover:text-blue-600 text-sm font-medium">
               GST Number Search
-            </a>
+            </Link>
             
             <div className="relative group">
               <button className="text-gray-600 hover:text-blue-600 text-sm font-medium flex items-center">
@@ -79,16 +81,16 @@ function HeaderWithClientSideToggle() {
               </button>
             </div>
             
-            <a href="/about" className="text-gray-600 hover:text-blue-600 text-sm font-medium">
+            <Link href="/about" className="text-gray-600 hover:text-blue-600 text-sm font-medium">
               About Us
-            </a>
+            </Link>
           </nav>
 
           {/* Download App Button */}
           <div className="hidden md:block">
-            <a href="/download" className="bg-gradient-to-r from-blue-500 to-blue-700 hover:from-blue-600 hover:to-blue-800 text-white px-6 py-2.5 rounded-md text-sm font-medium">
+            <Link href="/download" className="bg-gradient-to-r from-blue-500 to-blue-700 hover:from-blue-600 hover:to-blue-800 text-white px-6 py-2.5 rounded-md text-sm font-medium">
               Download App
-            </a>
+            </Link>
           </div>
 
           {/* Mobile Menu Button */}
@@ -107,21 +109,21 @@ function HeaderWithClientSideToggle() {
       {isMenuOpen && (
         <div className="md:hidden mt-2 bg-white border-t border-gray-100 shadow-sm">
           <div className="safe-area flex flex-col space-y-3 py-4">
-            <a href="/gst-search" className="text-gray-600 hover:text-blue-600 text-sm font-medium">
+            <Link href="/gst-search" className="text-gray-600 hover:text-blue-600 text-sm font-medium">
               GST Number Search
-            </a>
-            <a href="/products" className="text-gray-600 hover:text-blue-600 text-sm font-medium">
+            </Link>
+            <Link href="/products" className="text-gray-600 hover:text-blue-600 text-sm font-medium">
               Products
-            </a>
-            <a href="/resources" className="text-gray-600 hover:text-blue-600 text-sm font-medium">
+            </Link>
+            <Link href="/resources" className="text-gray-600 hover:text-blue-600 text-sm font-medium">
               Resources
-            </a>
-            <a href="/about" className="text-gray-600 hover:text-blue-600 text-sm font-medium">
+            </Link>
+            <Link href="/about" className="text-gray-600 hover:text-blue-600 text-sm font-medium">
               About Us
-            </a>
-            <a href="/download" className="bg-gradient-to-r from-blue-500 to-blue-700 hover:from-blue-600 hover:to-blue-800 text-white px-4 py-2 rounded-md text-sm font-medium text-center mt-2 w-full md:w-auto">
+            </Link>
+            <Link href="/download" className="bg-gradient-to-r from-blue-500 to-blue-700 hover:from-blue-600 hover:to-blue-800 text-white px-4 py-2 rounded-md text-sm font-medium text-center mt-2 w-full md:w-auto">
               Download App
-            </a>
+            </Link>
           </div>
         </div>
       )}
