@@ -48,7 +48,7 @@ function HeaderWithClientSideToggle() {
         {/* Logo */}
         <Link href="/" className="flex items-center">
           <Image 
-            src="/logo.svg" 
+            src="/logo.png" 
             alt="Fit-C Logo" 
             width={80} 
             height={32} 
